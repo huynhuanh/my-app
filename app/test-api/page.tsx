@@ -66,6 +66,7 @@ export default function TestAPI() {
       const data = await response.json();
       setResult({ operation: 'DELETE /api/keys/1', data });
     } catch (error) {
+      
       setResult({ operation: 'DELETE /api/keys/1', error: error instanceof Error ? error.message : String(error) });
     }
   };
