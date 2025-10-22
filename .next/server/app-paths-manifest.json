@@ -1,7 +1,5 @@
 {
-  "/api/keys/[id]/route": "app/api/keys/[id]/route.js",
   "/api/keys/route": "app/api/keys/route.js",
   "/dashboards/page": "app/dashboards/page.js",
-  "/page": "app/page.js",
-  "/test-api/page": "app/test-api/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

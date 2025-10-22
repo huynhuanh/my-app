@@ -11,8 +11,12 @@ export default function TestAPI() {
       const data = await response.json();
       setResult({ operation: 'GET /api/keys', data });
     } catch (error) {
-      setResult({ operation: 'GET /api/keys', error: error.message });
+      setResult({ 
+        operation: 'GET /api/keys', 
+        error: error instanceof Error ? error.message : String(error)
+      });
     }
+   
   };
 
   const testCreate = async () => {
@@ -28,8 +32,12 @@ export default function TestAPI() {
       const data = await response.json();
       setResult({ operation: 'POST /api/keys', data });
     } catch (error) {
-      setResult({ operation: 'POST /api/keys', error: error.message });
+      setResult({ 
+        operation: 'POST /api/keys', 
+        error: error instanceof Error ? error.message : String(error)
+      });
     }
+
   };
 
   const testUpdate = async () => {
@@ -46,7 +54,7 @@ export default function TestAPI() {
       const data = await response.json();
       setResult({ operation: 'PUT /api/keys/1', data });
     } catch (error) {
-      setResult({ operation: 'PUT /api/keys/1', error: error.message });
+      setResult({ operation: 'PUT /api/keys/1', error: error instanceof Error ? error.message : String(error) });
     }
   };
 
@@ -58,7 +66,7 @@ export default function TestAPI() {
       const data = await response.json();
       setResult({ operation: 'DELETE /api/keys/1', data });
     } catch (error) {
-      setResult({ operation: 'DELETE /api/keys/1', error: error.message });
+      setResult({ operation: 'DELETE /api/keys/1', error: error instanceof Error ? error.message : String(error) });
     }
   };
 
