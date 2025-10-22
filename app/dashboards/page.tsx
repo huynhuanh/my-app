@@ -78,7 +78,7 @@ export default function TestAPI() {
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">API Test Page</h1>
           <Link 
-            href="/dashboard"
+            href="/"
             className="bg-gray-500 text-white px-6 py-2 rounded hover:bg-gray-600 transition-colors"
           >
             ← Back to Dashboard
